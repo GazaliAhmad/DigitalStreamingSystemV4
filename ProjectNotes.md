@@ -11,5 +11,5 @@ Add BootStrap into Angular.json under styles:
             ],```
 
 
-Generate components without tests: `ng generate component component-name --skipTests=true`
+Generate components without tests: `ng generate component --skip-tests=true component-name`
 ````

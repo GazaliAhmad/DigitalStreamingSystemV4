@@ -15,6 +15,7 @@ import { DeletemoviesComponent } from "./movies/deletemovies/deletemovies.compon
 import { AllactorsComponent } from "./actors/allactors/allactors.component";
 import { DeleteactorsComponent } from "./actors/deleteactors/deleteactors.component";
 import { UpdateactorsComponent } from "./actors/updateactors/updateactors.component";
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { UpdateactorsComponent } from "./actors/updateactors/updateactors.compon
     AllactorsComponent,
     DeleteactorsComponent,
     UpdateactorsComponent,
+    NavbarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

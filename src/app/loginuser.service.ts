@@ -12,7 +12,7 @@ export class LoginuserService {
   constructor(private http: HttpClient) {}
 
   loginUser(user: User): Observable<Object> {
-    return this.http.get<Boolean>(
+    return this.http.get<Object>(
       `${this.baseUrl}${user.email}/${user.password}`
     );
   }

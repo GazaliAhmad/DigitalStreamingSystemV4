@@ -1,3 +1,4 @@
+import { Routes } from "@angular/router";
 import { Component, OnInit } from "@angular/core";
 import { LoginuserService } from "../loginuser.service";
 import { User } from "../user";
@@ -9,20 +10,47 @@ import { User } from "../user";
 })
 export class LoginComponent implements OnInit {
   user: User = new User();
+  Routes: any;
 
   constructor(private loginuserservice: LoginuserService) {}
 
   ngOnInit(): void {}
 
   userLogin() {
-    console.log(this.user);
-    this.loginuserservice.loginUser(this.user).subscribe((data: any) => {
-      let d = data.toString();
-      if (d == "true") {
+    this.loginuserservice.loginUser(this.user).subscribe((data: any): void => {
+      const lgIn = data.toString();
+      if (lgIn == "true") {
+        console.log("Login Successful");
+        this.Routes.navigate(["/home"]);
+      } else {
+        console.log("Login Failed");
+      }
+    });
+  }
+}
+
+/*
+
+userLogin() {
+    this.loginuserservice.loginUser(this.user).subscribe((data: any): void => {
+      const lgIn = data.toString();
+      if (lgIn == "true") {
         alert("Login Successfull");
       } else {
         alert("Login Failed");
       }
     });
   }
-}
+
+*/
+
+/*
+userLogin() {
+this.loginuserservice.loginUser(this.user).subscribe((data: any): void => {
+ data.toString() === "true"
+        ? alert("Login Successful")
+        : alert("Login Failed");
+    });
+  }
+
+  */

@@ -1,5 +1,7 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -10,9 +12,9 @@ import { AllmoviesComponent } from "./movies/allmovies/allmovies.component";
 import { AddmoviesComponent } from "./movies/addmovies/addmovies.component";
 import { UpdatemoviesComponent } from "./movies/updatemovies/updatemovies.component";
 import { DeletemoviesComponent } from "./movies/deletemovies/deletemovies.component";
-import { AllactorsComponent } from './actors/allactors/allactors.component';
-import { DeleteactorsComponent } from './actors/deleteactors/deleteactors.component';
-import { UpdateactorsComponent } from './actors/updateactors/updateactors.component';
+import { AllactorsComponent } from "./actors/allactors/allactors.component";
+import { DeleteactorsComponent } from "./actors/deleteactors/deleteactors.component";
+import { UpdateactorsComponent } from "./actors/updateactors/updateactors.component";
 
 @NgModule({
   declarations: [
@@ -28,7 +30,7 @@ import { UpdateactorsComponent } from './actors/updateactors/updateactors.compon
     DeleteactorsComponent,
     UpdateactorsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

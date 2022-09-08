@@ -1,24 +1,91 @@
 <div class="flex-container">
   <h1>Digital Streaming System</h1>
 </div>
-<div class="container">
-  <div class="mb-3">
-    <label for="emailInput" class="form-label">Email</label>
-    <input
-      type="email"
-      class="form-control"
-      id="emailInput"
-      placeholder="your_name@example.com"
-    />
-  </div>
-  <div class="mb-3">
-    <label for="pwdInput" class="form-label">Password</label>
-    <input
-      type="password"
-      class="form-control"
-      id="pwdInput"
-      placeholder="Your password"
-    />
-  </div>
-  <button type="button" class="btn btn-primary">Login</button>
+
+<div class="container col-md-6" aria-hidden="true">
+  <form (ngSubmit)="userLogin()">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        type="email"
+        [(ngModel)]="user.email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="your_name@example.com"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input
+        type="password"
+        [(ngModel)]="user.password"
+        class="form-control"
+        id="password"
+        name="password"
+        placeholder="Your password"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
 </div>
+
+<!--<div class="col-lg-12 login-form">
+  <div class="col-lg-12 login-form">
+    <form [formGroup]="loginForm">
+      <div class="form-group">
+        <label class="form-control-label">EMAIL</label>
+        <input type="email" formControlName="emailId" class="form-control" />
+
+        <span
+          class="text-danger"
+          *ngIf="loginForm.get('emailId').dirty && loginForm.get('emailId').invalid"
+          >Email ID is Invalid</span
+        >
+      </div>
+      <div class="form-group">
+        <label class="form-control-label">PASSWORD</label>
+        <input
+          [type]="inputType"
+          formControlName="userPassword"
+          class="form-control"
+        />
+        <span
+          class="text-danger"
+          *ngIf="loginForm.get('userPassword').dirty && loginForm.get('userPassword').invalid"
+          >Password is Invalid</span
+        ><br />
+        <input
+          style="margin-left: 370px;"
+          (change)="showPassword($event)"
+          type="checkbox"
+          class="form-check-input"
+        /><label style="margin-left: 390px; font-size: small;"
+          >Show Password</label
+        >
+      </div>
+      <div class="col-lg-12 loginbttm">
+        <div class="col-lg-6 login-btm login-text"></div>
+        <div class="col-lg-12 login-btm login-button">
+          <button
+            type="submit"
+            class="btn btn-outline-primary"
+            (click)="onSubmit()"
+            [disabled]="!loginForm.valid"
+          >
+            LOGIN
+          </button>
+          <button
+            class="nav-link"
+            class="btn btn-outline-primary"
+            (click)="onOpenRegisterModal(null, 'reg')"
+          >
+            REGISTER
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+-->

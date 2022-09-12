@@ -19,4 +19,4 @@ export class LoginuserService {
 }
 
 //constructor(private httpClient: HttpClient) {}
-//return this.httpClient.post(`${this.baseUrl}`, +user);
+//return this.httpClient.post(`${this.baseUrl}`, +user);s

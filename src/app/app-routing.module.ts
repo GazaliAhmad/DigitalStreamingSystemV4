@@ -1,3 +1,4 @@
+import { WrongcredComponent } from "./wrongcred/wrongcred.component";
 import { AllreviewsComponent } from "./reviews/allreviews/allreviews.component";
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./login/login.component";
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "movies", component: AllmoviesComponent },
   { path: "reviews", component: AllreviewsComponent },
+  { path: "wrongcred", component: WrongcredComponent },
   { path: "**", component: LoginComponent },
 ];
 

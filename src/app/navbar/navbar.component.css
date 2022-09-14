@@ -1,10 +1,11 @@
 .navbar-brand {
   font-size: 1.8em;
   color: #369;
+  text-shadow: 0 0 5px #369;
+  text-align: justify;
 }
 
 .container-fluid {
+  margin: 0 6%;
   background-color: rgb(181, 213, 241);
-  padding-top: 15px;
-  padding-bottom: 15px;
 }

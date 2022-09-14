@@ -1,14 +1,21 @@
-import { HomeComponent } from "./home/home.component";
-import { LoginComponent } from "./login/login.component";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { AllactorsComponent } from "./actors/allactors/allactors.component";
+
+import { Page404Component } from "./page404/page404.component";
+import { WrongcredComponent } from "./wrongcred/wrongcred.component";
+import { AllreviewsComponent } from "./reviews/allreviews/allreviews.component";
+import { HomeComponent } from "./home/home.component";
+import { LoginComponent } from "./login/login.component";
+import { AllmoviesComponent } from "./movies/allmovies/allmovies.component";
 
 const routes: Routes = [
   { path: "", component: LoginComponent },
   { path: "login", component: LoginComponent },
   { path: "home", component: HomeComponent },
-  { path: "**", component: LoginComponent },
+  { path: "movies", component: AllmoviesComponent },
+  { path: "reviews", component: AllreviewsComponent },
+  { path: "wrongcred", component: WrongcredComponent },
+  { path: "**", component: Page404Component },
 ];
 
 @NgModule({
@@ -16,12 +23,3 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-
-/*
-const routes: Routes = [
-  { path: "", redirectTo: "/login", pathMatch: "full" },
-  { path: "login", component: LoginComponent },
-  { path: "home", component: HomeComponent },
-  { path: "**", redirectTo: "/login" },
-];
-*/

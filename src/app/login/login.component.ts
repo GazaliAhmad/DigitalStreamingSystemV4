@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
       if (lgIn === "true") {
         this.router.navigate(["/home"]);
       } else {
-        alert("Invalid Credentials. Please try again.");
+        this.router.navigate(["/wrongcred"]);
       }
     });
   }

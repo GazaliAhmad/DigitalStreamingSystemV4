@@ -1,4 +1,4 @@
-import { User } from "./user";
+import { User } from "../guard/user";
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
@@ -17,6 +17,3 @@ export class LoginuserService {
     );
   }
 }
-
-//constructor(private httpClient: HttpClient) {}
-//return this.httpClient.post(`${this.baseUrl}`, +user);

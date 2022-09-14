@@ -1,0 +1,18 @@
+h1 {
+  text-align: center;
+  color: #369;
+  margin-top: 30px;
+  width: auto;
+}
+
+.form-label {
+  color: #369;
+}
+
+.card {
+  margin-top: 20px;
+  width: auto;
+  height: auto;
+  padding: 20px;
+  background-color: whitesmoke;
+}

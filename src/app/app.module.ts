@@ -16,10 +16,11 @@ import { AllactorsComponent } from "./actors/allactors/allactors.component";
 import { DeleteactorsComponent } from "./actors/deleteactors/deleteactors.component";
 import { UpdateactorsComponent } from "./actors/updateactors/updateactors.component";
 import { NavbarComponent } from "./navbar/navbar.component";
-import { AllreviewsComponent } from './reviews/allreviews/allreviews.component';
-import { AddreviewComponent } from './reviews/addreview/addreview.component';
-import { DeletereviewComponent } from './reviews/deletereview/deletereview.component';
-import { UpdatereviewComponent } from './reviews/updatereview/updatereview.component';
+import { AllreviewsComponent } from "./reviews/allreviews/allreviews.component";
+import { AddreviewComponent } from "./reviews/addreview/addreview.component";
+import { DeletereviewComponent } from "./reviews/deletereview/deletereview.component";
+import { UpdatereviewComponent } from "./reviews/updatereview/updatereview.component";
+
 @NgModule({
   declarations: [
     AppComponent,

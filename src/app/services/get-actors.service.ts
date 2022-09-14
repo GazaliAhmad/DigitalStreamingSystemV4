@@ -5,11 +5,11 @@ import { Injectable } from "@angular/core";
   providedIn: "root",
 })
 export class GetActorsService {
-  private url = "http://localhost:8080/actors/all";
+  private url = "http://localhost:8080";
 
   constructor(private httpClient: HttpClient) {}
 
   getAllActors() {
-    return this.httpClient.get(this.url);
+    return this.httpClient.get(`${this.url}/actors/all`);
   }
 }

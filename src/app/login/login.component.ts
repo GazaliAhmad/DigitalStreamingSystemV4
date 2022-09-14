@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
-import { LoginuserService } from "../loginuser.service";
-import { User } from "../user";
+import { LoginuserService } from "../guard/loginuser.service";
+import { User } from "../guard/user";
 
 @Component({
   selector: "app-login",
@@ -22,10 +22,9 @@ export class LoginComponent implements OnInit {
     this.loginuserservice.loginUser(this.user).subscribe((data: any): void => {
       const lgIn = data.toString();
       if (lgIn === "true") {
-        console.log("Login Successful");
         this.router.navigate(["/home"]);
       } else {
-        console.log("Login Failed");
+        alert("Invalid Credentials. Please try again.");
       }
     });
   }

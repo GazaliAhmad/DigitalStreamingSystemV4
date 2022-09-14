@@ -5,11 +5,11 @@ import { Injectable } from "@angular/core";
   providedIn: "root",
 })
 export class GetMoviesService {
-  private URL = "http://localhost:8080/movies/all";
+  private url = "http://localhost:8080";
 
   constructor(private httpClient: HttpClient) {}
 
   getAllMovies() {
-    return this.httpClient.get(this.URL);
+    return this.httpClient.get(`${this.url}/movies/all`);
   }
 }

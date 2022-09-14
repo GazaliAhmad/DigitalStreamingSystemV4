@@ -31,27 +31,7 @@ export class LoginComponent implements OnInit {
 }
 
 /*
-
-userLogin() {
-    this.loginuserservice.loginUser(this.user).subscribe((data: any): void => {
-      const lgIn = data.toString();
-      if (lgIn == "true") {
-        alert("Login Successfull");
-      } else {
-        alert("Login Failed");
-      }
-    });
-  }
-
+Probably not the correct way.
+        console.log("Login Successful");
+        localStorage.setItem("userok", "true");
 */
-
-/*
-userLogin() {
-this.loginuserservice.loginUser(this.user).subscribe((data: any): void => {
- data.toString() === "true"
-        ? alert("Login Successful")
-        : alert("Login Failed");
-    });
-  }
-
-  */

@@ -14,7 +14,10 @@ const routes: Routes = [
   { path: "home", component: HomeComponent },
   { path: "movies", component: AllmoviesComponent },
   { path: "reviews", component: AllreviewsComponent },
-  { path: "wrongcred", component: WrongcredComponent },
+  {
+    path: "wrongcred",
+    component: WrongcredComponent,
+  },
   { path: "**", component: Page404Component },
 ];
 

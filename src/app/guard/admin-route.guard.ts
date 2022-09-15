@@ -6,6 +6,7 @@ import {
   UrlTree,
 } from "@angular/router";
 import { Observable } from "rxjs";
+import { Router } from "@angular/router";
 
 @Injectable({
   providedIn: "root",
@@ -19,6 +20,9 @@ export class AdminRouteGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    return true;
+    const flag = sessionStorage.getItem("user");
+    if (flag === "true") {
+      return true;
+    } else return false;
   }
 }

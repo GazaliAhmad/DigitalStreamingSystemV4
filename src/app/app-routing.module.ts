@@ -23,7 +23,11 @@ const routes: Routes = [
   { path: "addmovies", component: AddmoviesComponent },
   { path: "deletemovies", component: DeletemoviesComponent },
   { path: "updatemovies", component: UpdatemoviesComponent },
-  { path: "reviews", component: AllreviewsComponent },
+  {
+    path: "reviews",
+    component: AllreviewsComponent,
+    canActivate: [AdminRouteGuard],
+  },
   { path: "addreviews", component: AddreviewComponent },
   { path: "deletereviews", component: DeletereviewComponent },
   { path: "updatereviews", component: UpdatereviewComponent },

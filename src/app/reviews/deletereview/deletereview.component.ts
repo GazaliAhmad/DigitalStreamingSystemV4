@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-deletereview',
-  templateUrl: './deletereview.component.html',
-  styleUrls: ['./deletereview.component.scss']
+  selector: "app-deletereview",
+  templateUrl: "./deletereview.component.html",
+  styleUrls: ["./deletereview.component.css"],
 })
 export class DeletereviewComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

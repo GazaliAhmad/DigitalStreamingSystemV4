@@ -16,7 +16,9 @@ export class LoginComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.clearSessionStorage();
+  }
 
   clearSessionStorage() {
     sessionStorage.clear();
@@ -29,7 +31,7 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem("user", lgIn);
         this.router.navigate(["/home"]);
       } else {
-        sessionStorage.setItem("user", lgIn);
+        sessionStorage.clear();
         this.router.navigate(["/wrongcred"]);
       }
     });

@@ -16,21 +16,49 @@ import { AddmoviesComponent } from "./movies/addmovies/addmovies.component";
 import { UpdatereviewComponent } from "./reviews/updatereview/updatereview.component";
 
 const routes: Routes = [
-  { path: "", component: LoginComponent },
+  { path: "", redirectTo: "/login", pathMatch: "full" },
   { path: "login", component: LoginComponent },
-  { path: "home", component: HomeComponent },
-  { path: "movies", component: AllmoviesComponent },
-  { path: "addmovies", component: AddmoviesComponent },
-  { path: "deletemovies", component: DeletemoviesComponent },
-  { path: "updatemovies", component: UpdatemoviesComponent },
+  { path: "home", component: HomeComponent, canActivate: [AdminRouteGuard] },
+  {
+    path: "movies",
+    component: AllmoviesComponent,
+    canActivate: [AdminRouteGuard],
+  },
+  {
+    path: "addmovies",
+    component: AddmoviesComponent,
+    canActivate: [AdminRouteGuard],
+  },
+  {
+    path: "deletemovies",
+    component: DeletemoviesComponent,
+    canActivate: [AdminRouteGuard],
+  },
+  {
+    path: "updatemovies",
+    component: UpdatemoviesComponent,
+    canActivate: [AdminRouteGuard],
+  },
   {
     path: "reviews",
     component: AllreviewsComponent,
     canActivate: [AdminRouteGuard],
   },
-  { path: "addreviews", component: AddreviewComponent },
-  { path: "deletereviews", component: DeletereviewComponent },
-  { path: "updatereviews", component: UpdatereviewComponent },
+  {
+    path: "addreviews",
+    component: AddreviewComponent,
+    canActivate: [AdminRouteGuard],
+  },
+  {
+    path: "deletereviews",
+    component: DeletereviewComponent,
+    canActivate: [AdminRouteGuard],
+  },
+  {
+    path: "updatereviews",
+    component: UpdatereviewComponent,
+    canActivate: [AdminRouteGuard],
+  },
   { path: "wrongcred", component: WrongcredComponent },
   { path: "**", component: Page404Component },
 ];

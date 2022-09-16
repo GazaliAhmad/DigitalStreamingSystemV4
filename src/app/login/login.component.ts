@@ -31,7 +31,6 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem("user", lgIn);
         this.router.navigate(["/home"]);
       } else {
-        sessionStorage.clear();
         this.router.navigate(["/wrongcred"]);
       }
     });

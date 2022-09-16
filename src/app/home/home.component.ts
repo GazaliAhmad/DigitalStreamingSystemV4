@@ -1,4 +1,4 @@
-import { GetActorsService } from "./../services/get-actors.service";
+import { GetActorsService } from "../services/get/get-actors.service";
 import { Component, OnInit } from "@angular/core";
 
 @Component({

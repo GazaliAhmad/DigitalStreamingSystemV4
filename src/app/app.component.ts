@@ -6,9 +6,5 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  title = "DigitalStreamingSystemV4";
-
-  ClearSession() {
-    sessionStorage.clear();
-  }
+  title = "Digital Streaming System V4";
 }

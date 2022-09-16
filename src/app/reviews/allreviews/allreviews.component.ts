@@ -1,4 +1,4 @@
-import { GetReviewsService } from "./../../services/get-reviews.service";
+import { GetReviewsService } from "../../services/get/get-reviews.service";
 import { Component, OnInit } from "@angular/core";
 
 @Component({

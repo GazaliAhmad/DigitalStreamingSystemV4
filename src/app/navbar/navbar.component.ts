@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { LoginComponent } from "../login/login.component";
 
 @Component({
   selector: "app-navbar",
@@ -6,11 +7,9 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./navbar.component.css"],
 })
 export class NavbarComponent implements OnInit {
+  clearSessionStorage = LoginComponent.prototype.clearSessionStorage;
+
   constructor() {}
 
   ngOnInit(): void {}
-
-  userLogOut(): void {
-    sessionStorage.clear();
-  }
 }

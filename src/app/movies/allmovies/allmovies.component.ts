@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { GetMoviesService } from "src/app/services/get-movies.service";
+import { GetMoviesService } from "src/app/services/get/get-movies.service";
 
 @Component({
   selector: "app-allmovies",

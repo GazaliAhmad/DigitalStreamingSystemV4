@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { GetActorsService } from "src/app/services/get-actors.service";
+import { GetActorsService } from "src/app/services/get/get-actors.service";
 
 @Component({
   selector: "app-allactors",

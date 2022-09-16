@@ -16,22 +16,24 @@ export class LoginComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.clearSessionStorage();
+  }
+
+  clearSessionStorage() {
+    sessionStorage.clear();
+  }
 
   userLogin() {
     this.loginuserservice.loginUser(this.user).subscribe((data: any): void => {
       const lgIn = data.toString();
       if (lgIn === "true") {
+        sessionStorage.setItem("user", lgIn);
         this.router.navigate(["/home"]);
       } else {
+        sessionStorage.clear();
         this.router.navigate(["/wrongcred"]);
       }
     });
   }
 }
-
-/*
-Probably not the correct way.
-        console.log("Login Successful");
-        localStorage.setItem("userok", "true");
-*/

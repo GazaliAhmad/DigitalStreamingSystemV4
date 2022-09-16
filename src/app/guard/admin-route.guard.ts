@@ -1,3 +1,4 @@
+import { LoginComponent } from "./../login/login.component";
 import { Injectable } from "@angular/core";
 import {
   ActivatedRouteSnapshot,
@@ -6,12 +7,13 @@ import {
   UrlTree,
 } from "@angular/router";
 import { Observable } from "rxjs";
-import { Router } from "@angular/router";
 
 @Injectable({
   providedIn: "root",
 })
 export class AdminRouteGuard implements CanActivate {
+  // constructor(private login: LoginComponent) {}
+
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
@@ -20,8 +22,8 @@ export class AdminRouteGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    const flag = sessionStorage.getItem("user");
-    if (flag === "true") {
+    const xStr = sessionStorage.getItem("xNum");
+    if (sessionStorage.getItem("xNum") === xStr && xStr?.length === 103) {
       return true;
     } else return false;
   }

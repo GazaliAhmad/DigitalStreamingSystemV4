@@ -20,8 +20,8 @@ import { AllreviewsComponent } from "./reviews/allreviews/allreviews.component";
 import { AddreviewComponent } from "./reviews/addreview/addreview.component";
 import { DeletereviewComponent } from "./reviews/deletereview/deletereview.component";
 import { UpdatereviewComponent } from "./reviews/updatereview/updatereview.component";
-import { Page404Component } from './page404/page404.component';
-import { WrongcredComponent } from './wrongcred/wrongcred.component';
+import { Page404Component } from "./page404/page404.component";
+import { WrongcredComponent } from "./wrongcred/wrongcred.component";
 
 @NgModule({
   declarations: [
@@ -45,7 +45,7 @@ import { WrongcredComponent } from './wrongcred/wrongcred.component';
     WrongcredComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
-  providers: [],
+  providers: [LoginComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

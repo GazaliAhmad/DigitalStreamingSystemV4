@@ -2,7 +2,6 @@ import { DeletereviewComponent } from "./reviews/deletereview/deletereview.compo
 import { AddreviewComponent } from "./reviews/addreview/addreview.component";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-
 import { Page404Component } from "./page404/page404.component";
 import { WrongcredComponent } from "./wrongcred/wrongcred.component";
 import { AllreviewsComponent } from "./reviews/allreviews/allreviews.component";
@@ -37,6 +36,12 @@ const routes: Routes = [
   {
     path: "updatemovies",
     component: UpdatemoviesComponent,
+    canActivate: [AdminRouteGuard],
+  },
+
+  {
+    path: "reviews",
+    component: AllreviewsComponent,
     canActivate: [AdminRouteGuard],
   },
   {

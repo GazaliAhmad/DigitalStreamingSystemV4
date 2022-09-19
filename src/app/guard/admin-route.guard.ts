@@ -25,17 +25,3 @@ export class AdminRouteGuard implements CanActivate {
     } else return false;
   }
 }
-
-/*
-
-  canActivateChild(|childRoute: ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<boolean | UrlTree> | Observable<boolean | UrlTree> | boolean | UrlTree {
-    return this.canActivate(childRoute, state);
-  }
-}
-
-*/
-
-// constructor(private login: LoginComponent) {}
-// Remember to import LoginComponent
-// import { LoginComponent } from "./login/login.component";
-// Trying to get variables from another class is not working

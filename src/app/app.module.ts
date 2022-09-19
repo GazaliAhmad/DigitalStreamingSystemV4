@@ -45,7 +45,7 @@ import { WrongcredComponent } from "./wrongcred/wrongcred.component";
     WrongcredComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
-  providers: [LoginComponent],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -73,23 +73,3 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-
-/*
-
- {
-    path: "movies",
-    component: AllmoviesComponent,
-    children: [
-      { path: "addmovies", component: AddmoviesComponent },
-      { path: "deletemovies", component: DeletemoviesComponent },
-      { path: "updatemovies", component: UpdatemoviesComponent },
-    ],
-  },
-
-
-   {
-    path: "movies",
-    component: AllmoviesComponent,
-  },
-  { path: "addmovies", component: AddmoviesComponent },
-  */

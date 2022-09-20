@@ -17,7 +17,7 @@ export class AddmoviesComponent implements OnInit {
     this.httpClient
       .post(`${this.url}/movies/add`, moviedata)
       .subscribe((result) => {
-        this.router.navigate(["/movies"]);
+        this.router.navigate(["/addsuccess"]);
       });
   }
 

@@ -1,40 +1,54 @@
 <app-navbar></app-navbar>
-<div class="container"><p>addmovies works!</p></div>
 <div class="container">
-  <form #moviePost="ngForm" (ngSubmit)="postMovie(moviePost.value)">
-    <input
-      aria-label="movie_title"
-      type="text"
-      name="movie_title"
-      ngModel
-      placeholder="Movie Title"
-    />
-    <br /><br />
-    <input
-      aria-label="movie_cost"
-      type="text"
-      name="movie_cost"
-      ngModel
-      placeholder="Movie Cost"
-    />
-    <br /><br />
-    <input
-      aria-label="movie_year"
-      type="text"
-      name="movie_year"
-      ngModel
-      placeholder="Year released"
-    />
-    <br /><br />
-    <input
-      aria-label="Movie_image_url"
-      type="text"
-      name="movie_image_url"
-      ngModel
-      placeholder="Movie Image"
-    />
-    <br /><br />
-
-    <button type="submit">Submit Data</button>
-  </form>
+  <div class="container"><h2>Add A Movie</h2></div>
+  <div class="container">
+    <form #moviePost="ngForm" (ngSubmit)="postMovie(moviePost.value)">
+      Movie Title:
+      <input
+        aria-label="movie_title"
+        type="text"
+        name="movie_title"
+        ngModel
+        placeholder="Movie Title"
+      />
+      <br /><br />
+      Movie Cost:
+      <input
+        aria-label="movie_cost"
+        type="text"
+        name="movie_cost"
+        ngModel
+        placeholder="Movie Cost"
+      />
+      <br /><br />
+      Year Released:
+      <input
+        aria-label="movie_year"
+        type="text"
+        name="movie_year"
+        ngModel
+        placeholder="Year released"
+      />
+      <br /><br />
+      Movie Image:
+      <input
+        aria-label="Movie_image_url"
+        type="text"
+        name="movie_image_url"
+        ngModel
+        placeholder="Movie Image"
+      />
+      <br /><br />
+      <button type="submit" class="btn btn-primary active btn-rounded">
+        Add Movie
+      </button>
+      <button
+        type="submit"
+        class="btn btn-primary active btn-rounded"
+        [routerLink]="['/', 'movies']"
+      >
+        Back to Movies
+      </button>
+    </form>
+  </div>
 </div>

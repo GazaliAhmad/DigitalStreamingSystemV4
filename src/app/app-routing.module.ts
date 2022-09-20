@@ -13,6 +13,7 @@ import { DeletemoviesComponent } from "./movies/deletemovies/deletemovies.compon
 import { UpdatemoviesComponent } from "./movies/updatemovies/updatemovies.component";
 import { AddmoviesComponent } from "./movies/addmovies/addmovies.component";
 import { UpdatereviewComponent } from "./reviews/updatereview/updatereview.component";
+import { AddsuccessComponent } from "./movies/addmovies/addsuccess/addsuccess.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/login", pathMatch: "full" },
@@ -26,6 +27,11 @@ const routes: Routes = [
   {
     path: "addmovies",
     component: AddmoviesComponent,
+    canActivate: [AdminRouteGuard],
+  },
+  {
+    path: "addsuccess",
+    component: AddsuccessComponent,
     canActivate: [AdminRouteGuard],
   },
   {

@@ -3,13 +3,13 @@
   <div class="container buttonalign">
     <a
       [routerLink]="['/', 'addmovies']"
-      class="btn btn-success btn-rounded"
+      class="btn btn-rounded btn-outline-success"
       role="link"
       >Add movies</a
     >
   </div>
   <div class="container p-2">
-    <table>
+    <table class="table">
       <tr class="bg-warning p-3 text-center">
         <th>Movie ID</th>
         <th>Movie Title</th>
@@ -24,18 +24,18 @@
         <td>{{ post.movie_cost }}</td>
         <td>{{ post.movie_year }}</td>
         <td>{{ post.movie_image_url }}</td>
-        <td>
+        <td class="buttonalign">
           <a
             [routerLink]="['/', 'updatemovies']"
             class="btn btn-warning btn-rounded"
             role="link"
-            >Update movies</a
+            >Update</a
           >
           <a
             [routerLink]="['/', 'deletemovies']"
-            class="btn btn-danger btn-rounded"
+            class="btn btn-danger btn-rounded text-dark mx-3"
             role="link"
-            >Delete movies</a
+            >Delete</a
           >
         </td>
       </tr>

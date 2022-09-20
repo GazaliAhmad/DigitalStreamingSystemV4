@@ -14,6 +14,10 @@ import { UpdatemoviesComponent } from "./movies/updatemovies/updatemovies.compon
 import { AddmoviesComponent } from "./movies/addmovies/addmovies.component";
 import { UpdatereviewComponent } from "./reviews/updatereview/updatereview.component";
 import { AddsuccessComponent } from "./movies/addmovies/addsuccess/addsuccess.component";
+import { AllactorsComponent } from "./actors/allactors/allactors.component";
+import { AddactorsComponent } from "./actors/addactors/addactors.component";
+import { DeleteactorsComponent } from "./actors/deleteactors/deleteactors.component";
+import { UpdateactorsComponent } from "./actors/updateactors/updateactors.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/login", pathMatch: "full" },
@@ -70,6 +74,28 @@ const routes: Routes = [
     component: UpdatereviewComponent,
     canActivate: [AdminRouteGuard],
   },
+  {
+    path: "actors",
+    component: AllactorsComponent,
+    canActivate: [AdminRouteGuard],
+  },
+  {
+    path: "addactors",
+    component: AddactorsComponent,
+    canActivate: [AdminRouteGuard],
+  },
+
+  {
+    path: "deleteactors",
+    component: DeleteactorsComponent,
+    canActivate: [AdminRouteGuard],
+  },
+  {
+    path: "updateactors",
+    component: UpdateactorsComponent,
+    canActivate: [AdminRouteGuard],
+  },
+
   { path: "wrongcred", component: WrongcredComponent },
   { path: "**", component: Page404Component },
 ];

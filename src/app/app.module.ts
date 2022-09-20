@@ -23,6 +23,7 @@ import { UpdatereviewComponent } from "./reviews/updatereview/updatereview.compo
 import { Page404Component } from "./page404/page404.component";
 import { WrongcredComponent } from "./wrongcred/wrongcred.component";
 import { AddsuccessComponent } from './movies/addmovies/addsuccess/addsuccess.component';
+import { AddactorsComponent } from './actors/addactors/addactors.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { AddsuccessComponent } from './movies/addmovies/addsuccess/addsuccess.co
     Page404Component,
     WrongcredComponent,
     AddsuccessComponent,
+    AddactorsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

@@ -27,6 +27,14 @@
           <a
             class="nav-link active"
             aria-current="page"
+            [routerLink]="['/', 'actors']"
+            >Actors</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
             [routerLink]="['/', 'reviews']"
             >Reviews</a
           >
@@ -37,7 +45,7 @@
     <div>
       <a
         [routerLink]="['/', 'login']"
-        class="btn btn-primary active btn-rounded"
+        class="btn btn-outline-primary btn-rounded"
         role="link"
         (click)="clearSessionStorage"
         >Logout</a

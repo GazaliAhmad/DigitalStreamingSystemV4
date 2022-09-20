@@ -17,9 +17,33 @@ export class AllactorsComponent implements OnInit {
       console.log(response);
     });
   }
+
+  getActorName(actor_id: number) {
+    for (let actor of this.posts) {
+      if (actor.id === actor_id) {
+        console.log(actor.name);
+        return actor.actorName;
+      }
+    }
+    return "";
+  }
 }
 
 /*
+*********************************
+getActorName(actor_id: number) {
+    for (let actor of this.posts) {
+      if (actor.id === actor_id) {
+        console.log(actor.name);
+        return actor.actorName;
+      }
+    }
+    return "";
+  }
+**********************************
+
+
+
 This was done already. I want to organize by movie_title list of actors in it.
 For example:
 
@@ -38,15 +62,4 @@ No repeats of movie titles.
 
 
 
-*********************************
-getActorName(actor_id: number) {
-    for (let actor of this.posts) {
-      if (actor.id === actor_id) {
-        console.log(actor.name);
-        return actor.actorName;
-      }
-    }
-    return "";
-  }
-**********************************
 */

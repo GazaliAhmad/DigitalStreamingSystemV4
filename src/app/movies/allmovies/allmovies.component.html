@@ -1,30 +1,32 @@
 <app-navbar></app-navbar>
 <div class="container">
-  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-    <a
-      [routerLink]="['/', 'addmovies']"
-      class="btn btn-success btn-rounded"
-      role="link"
-      >Add movies</a
-    >
-    <a
-      [routerLink]="['/', 'updatemovies']"
-      class="btn btn-warning btn-rounded"
-      role="link"
-      >Update movies</a
-    >
-    <a
-      [routerLink]="['/', 'deletemovies']"
-      class="btn btn-danger btn-rounded"
-      role="link"
-      >Delete movies</a
-    >
+  <div class="container">
+    <div class="container">
+      <a
+        [routerLink]="['/', 'addmovies']"
+        class="btn btn-success btn-rounded"
+        role="link"
+        >Add movies</a
+      >
+    </div>
   </div>
-</div>
-<div class="container">
-  <ul class="list-group">
-    <li *ngFor="let post of posts" class="list-group-item">
-      {{post.movie_title}} was released in {{post.movie_year}}.
-    </li>
-  </ul>
+  <div class="container">
+    <ul class="list-group">
+      <li *ngFor="let post of posts" class="list-group-item">
+        {{post.movie_title}} was released in {{post.movie_year}}.
+        <a
+          [routerLink]="['/', 'updatemovies']"
+          class="btn btn-warning btn-rounded"
+          role="link"
+          >Update movies</a
+        >
+        <a
+          [routerLink]="['/', 'deletemovies']"
+          class="btn btn-danger btn-rounded"
+          role="link"
+          >Delete movies</a
+        >
+      </li>
+    </ul>
+  </div>
 </div>

@@ -22,6 +22,7 @@ import { DeletereviewComponent } from "./reviews/deletereview/deletereview.compo
 import { UpdatereviewComponent } from "./reviews/updatereview/updatereview.component";
 import { Page404Component } from "./page404/page404.component";
 import { WrongcredComponent } from "./wrongcred/wrongcred.component";
+import { AddsuccessComponent } from './movies/addmovies/addsuccess/addsuccess.component';
 
 @NgModule({
   declarations: [
@@ -43,9 +44,10 @@ import { WrongcredComponent } from "./wrongcred/wrongcred.component";
     UpdatereviewComponent,
     Page404Component,
     WrongcredComponent,
+    AddsuccessComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
-  providers: [LoginComponent],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -13,6 +13,7 @@ import { DeletemoviesComponent } from "./movies/deletemovies/deletemovies.compon
 import { UpdatemoviesComponent } from "./movies/updatemovies/updatemovies.component";
 import { AddmoviesComponent } from "./movies/addmovies/addmovies.component";
 import { UpdatereviewComponent } from "./reviews/updatereview/updatereview.component";
+import { AddsuccessComponent } from "./movies/addmovies/addsuccess/addsuccess.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/login", pathMatch: "full" },
@@ -26,6 +27,11 @@ const routes: Routes = [
   {
     path: "addmovies",
     component: AddmoviesComponent,
+    canActivate: [AdminRouteGuard],
+  },
+  {
+    path: "addsuccess",
+    component: AddsuccessComponent,
     canActivate: [AdminRouteGuard],
   },
   {
@@ -73,23 +79,3 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-
-/*
-
- {
-    path: "movies",
-    component: AllmoviesComponent,
-    children: [
-      { path: "addmovies", component: AddmoviesComponent },
-      { path: "deletemovies", component: DeletemoviesComponent },
-      { path: "updatemovies", component: UpdatemoviesComponent },
-    ],
-  },
-
-
-   {
-    path: "movies",
-    component: AllmoviesComponent,
-  },
-  { path: "addmovies", component: AddmoviesComponent },
-  */

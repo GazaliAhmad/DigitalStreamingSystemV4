@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <div class="container"><p>addmovies works!</p></div>
 <div class="container">
-  <form #moviePost="ngForm" (ngSubmit)="onSubmit(moviePost.value)">
+  <form #moviePost="ngForm" (ngSubmit)="postMovie(moviePost.value)">
     <input
       aria-label="movie_title"
       type="text"

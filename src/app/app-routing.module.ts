@@ -1,32 +1,47 @@
-import { DeletereviewComponent } from "./reviews/deletereview/deletereview.component";
-import { AddreviewComponent } from "./reviews/addreview/addreview.component";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { Page404Component } from "./page404/page404.component";
-import { WrongcredComponent } from "./wrongcred/wrongcred.component";
-import { AllreviewsComponent } from "./reviews/allreviews/allreviews.component";
+
+// Logging import paths
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./login/login.component";
-import { AllmoviesComponent } from "./movies/allmovies/allmovies.component";
 import { AdminRouteGuard } from "./guard/admin-route.guard";
+
+// Movies import paths
+import { AllmoviesComponent } from "./movies/allmovies/allmovies.component";
 import { DeletemoviesComponent } from "./movies/deletemovies/deletemovies.component";
 import { UpdatemoviesComponent } from "./movies/updatemovies/updatemovies.component";
 import { AddmoviesComponent } from "./movies/addmovies/addmovies.component";
-import { UpdatereviewComponent } from "./reviews/updatereview/updatereview.component";
 import { AddsuccessComponent } from "./movies/addmovies/addsuccess/addsuccess.component";
+
+// Reviews import paths
+import { AllreviewsComponent } from "./reviews/allreviews/allreviews.component";
+import { DeletereviewComponent } from "./reviews/deletereview/deletereview.component";
+import { AddreviewComponent } from "./reviews/addreview/addreview.component";
+import { UpdatereviewComponent } from "./reviews/updatereview/updatereview.component";
+
+// Actors import paths
 import { AllactorsComponent } from "./actors/allactors/allactors.component";
 import { AddactorsComponent } from "./actors/addactors/addactors.component";
 import { DeleteactorsComponent } from "./actors/deleteactors/deleteactors.component";
 import { UpdateactorsComponent } from "./actors/updateactors/updateactors.component";
+
+// Admin/Users import paths
 import { AlladminComponent } from "./user-reg/alladmin/alladmin.component";
 import { AdduserComponent } from "./user-reg/adduser/adduser.component";
 import { UpdateuserComponent } from "./user-reg/updateuser/updateuser.component";
 import { DeleteuserComponent } from "./user-reg/deleteuser/deleteuser.component";
+import { AddusersuccessComponent } from "./user-reg/adduser/addusersuccess/addusersuccess.component";
+
+// Misc import paths
+import { Page404Component } from "./page404/page404.component";
+import { WrongcredComponent } from "./wrongcred/wrongcred.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/login", pathMatch: "full" },
   { path: "login", component: LoginComponent },
   { path: "home", component: HomeComponent, canActivate: [AdminRouteGuard] },
+
+  // Movies Path
   {
     path: "movies",
     component: AllmoviesComponent,
@@ -53,6 +68,7 @@ const routes: Routes = [
     canActivate: [AdminRouteGuard],
   },
 
+  // Reviews Path
   {
     path: "reviews",
     component: AllreviewsComponent,
@@ -78,6 +94,8 @@ const routes: Routes = [
     component: UpdatereviewComponent,
     canActivate: [AdminRouteGuard],
   },
+
+  // Actors Path
   {
     path: "actors",
     component: AllactorsComponent,
@@ -88,7 +106,6 @@ const routes: Routes = [
     component: AddactorsComponent,
     canActivate: [AdminRouteGuard],
   },
-
   {
     path: "deleteactors",
     component: DeleteactorsComponent,
@@ -99,8 +116,10 @@ const routes: Routes = [
     component: UpdateactorsComponent,
     canActivate: [AdminRouteGuard],
   },
+
+  // Admin/Users Path
   {
-    path: "alladmin",
+    path: "users",
     component: AlladminComponent,
     canActivate: [AdminRouteGuard],
   },
@@ -115,10 +134,17 @@ const routes: Routes = [
     canActivate: [AdminRouteGuard],
   },
   {
+    path: "addusersuccess",
+    component: AddusersuccessComponent,
+    canActivate: [AdminRouteGuard],
+  },
+  {
     path: "deleteuser",
     component: DeleteuserComponent,
     canActivate: [AdminRouteGuard],
   },
+
+  // Misc Path
   { path: "wrongcred", component: WrongcredComponent },
   { path: "**", component: Page404Component },
 ];

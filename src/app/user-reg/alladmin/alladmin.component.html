@@ -11,7 +11,7 @@
   <div class="container p-2">
     <table class="table table-primary table-striped text-center">
       <thead>
-        <tr>
+        <tr class="bg-warning p-3 text-center">
           <th>Admin ID</th>
           <th>First Name</th>
           <th>Last Name</th>
@@ -22,21 +22,16 @@
         </tr>
       </thead>
       <tbody>
-        <!--<tr *ngFor="let post of posts" class="p-2">-->
+        <tr *ngFor="let post of posts" class="p-2"></tr>
         <tr>
-          <td>admin_id</td>
-          <td>first_name</td>
-          <td>last_name</td>
-          <td>username</td>
-          <td>email</td>
-          <td>phone</td>
-          <!--
-          <td>{{ post.movie_id }}</td>
-        <td>{{ post.movie_title }}</td>
-        <td>{{ post.movie_cost }}</td>
-        <td>{{ post.movie_year }}</td>
-        <td>{{ post.movie_image_url }}</td>
-        -->
+          <!-- Error ins display. Should be post.admin_id
+          <td>{{ posts.admin_id}}</td>
+          <td>{{ posts.first_name }}</td>
+          <td>{{ posts.last_name}}</td>
+          <td>{{ posts.username}}</td>
+          <td>{{ posts.email}}</td>
+          <td>{{ posts.phone}}</td>
+          -->
           <td class="buttoncenter">
             <a
               [routerLink]="['/', 'updateuser']"
@@ -46,7 +41,7 @@
             >
             <a
               [routerLink]="['/', 'deleteuser']"
-              class="btn btn-rounded text-dark btn-outline-danger mx-3"
+              class="btn btn-rounded text-dark btn-outline-danger mx-2"
               role="link"
               >Delete</a
             >

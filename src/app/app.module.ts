@@ -27,6 +27,7 @@ import { DeleteuserComponent } from "./user-reg/deleteuser/deleteuser.component"
 import { UpdateuserComponent } from "./user-reg/updateuser/updateuser.component";
 import { AdduserComponent } from "./user-reg/adduser/adduser.component";
 import { AlladminComponent } from './user-reg/alladmin/alladmin.component';
+import { AddusersuccessComponent } from './user-reg/adduser/addusersuccess/addusersuccess.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { AlladminComponent } from './user-reg/alladmin/alladmin.component';
     DeleteuserComponent,
     UpdateuserComponent,
     AlladminComponent,
+    AddusersuccessComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

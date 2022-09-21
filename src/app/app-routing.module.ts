@@ -18,6 +18,9 @@ import { AllactorsComponent } from "./actors/allactors/allactors.component";
 import { AddactorsComponent } from "./actors/addactors/addactors.component";
 import { DeleteactorsComponent } from "./actors/deleteactors/deleteactors.component";
 import { UpdateactorsComponent } from "./actors/updateactors/updateactors.component";
+import { AdduserComponent } from "./user-reg/adduser/adduser.component";
+import { UpdateuserComponent } from "./user-reg/updateuser/updateuser.component";
+import { DeleteuserComponent } from "./user-reg/deleteuser/deleteuser.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/login", pathMatch: "full" },
@@ -95,7 +98,21 @@ const routes: Routes = [
     component: UpdateactorsComponent,
     canActivate: [AdminRouteGuard],
   },
-
+  {
+    path: "adduser",
+    component: AdduserComponent,
+    canActivate: [AdminRouteGuard],
+  },
+  {
+    path: "updateuser",
+    component: UpdateuserComponent,
+    canActivate: [AdminRouteGuard],
+  },
+  {
+    path: "deleteuser",
+    component: DeleteuserComponent,
+    canActivate: [AdminRouteGuard],
+  },
   { path: "wrongcred", component: WrongcredComponent },
   { path: "**", component: Page404Component },
 ];

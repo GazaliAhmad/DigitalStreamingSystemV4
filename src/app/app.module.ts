@@ -7,7 +7,6 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./login/login.component";
-import { UserRegComponent } from "./user-reg/user-reg.component";
 import { AllmoviesComponent } from "./movies/allmovies/allmovies.component";
 import { AddmoviesComponent } from "./movies/addmovies/addmovies.component";
 import { UpdatemoviesComponent } from "./movies/updatemovies/updatemovies.component";
@@ -22,15 +21,17 @@ import { DeletereviewComponent } from "./reviews/deletereview/deletereview.compo
 import { UpdatereviewComponent } from "./reviews/updatereview/updatereview.component";
 import { Page404Component } from "./page404/page404.component";
 import { WrongcredComponent } from "./wrongcred/wrongcred.component";
-import { AddsuccessComponent } from './movies/addmovies/addsuccess/addsuccess.component';
-import { AddactorsComponent } from './actors/addactors/addactors.component';
+import { AddsuccessComponent } from "./movies/addmovies/addsuccess/addsuccess.component";
+import { AddactorsComponent } from "./actors/addactors/addactors.component";
+import { DeleteuserComponent } from "./user-reg/deleteuser/deleteuser.component";
+import { UpdateuserComponent } from "./user-reg/updateuser/updateuser.component";
+import { AdduserComponent } from "./user-reg/adduser/adduser.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    UserRegComponent,
     AllmoviesComponent,
     AddmoviesComponent,
     UpdatemoviesComponent,
@@ -47,6 +48,9 @@ import { AddactorsComponent } from './actors/addactors/addactors.component';
     WrongcredComponent,
     AddsuccessComponent,
     AddactorsComponent,
+    AdduserComponent,
+    DeleteuserComponent,
+    UpdateuserComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

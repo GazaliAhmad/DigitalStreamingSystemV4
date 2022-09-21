@@ -18,6 +18,7 @@ import { AllactorsComponent } from "./actors/allactors/allactors.component";
 import { AddactorsComponent } from "./actors/addactors/addactors.component";
 import { DeleteactorsComponent } from "./actors/deleteactors/deleteactors.component";
 import { UpdateactorsComponent } from "./actors/updateactors/updateactors.component";
+import { AlladminComponent } from "./user-reg/alladmin/alladmin.component";
 import { AdduserComponent } from "./user-reg/adduser/adduser.component";
 import { UpdateuserComponent } from "./user-reg/updateuser/updateuser.component";
 import { DeleteuserComponent } from "./user-reg/deleteuser/deleteuser.component";
@@ -96,6 +97,11 @@ const routes: Routes = [
   {
     path: "updateactors",
     component: UpdateactorsComponent,
+    canActivate: [AdminRouteGuard],
+  },
+  {
+    path: "alladmin",
+    component: AlladminComponent,
     canActivate: [AdminRouteGuard],
   },
   {

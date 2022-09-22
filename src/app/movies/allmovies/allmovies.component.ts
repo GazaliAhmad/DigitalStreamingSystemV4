@@ -17,17 +17,3 @@ export class AllmoviesComponent implements OnInit {
     });
   }
 }
-
-/*
-
- {
-        "admin_id": 71,
-        "first_name": "Jill",
-        "last_name": "Hardy",
-        "username": "jillhardy",
-        "password": "63g564u48",
-        "email": "jillhardy@gmail.com",
-        "phone_number": "25436774"
-    },
-
-    */

@@ -1,5 +1,5 @@
+import { GetAdminService } from "./../../services/get/get-admin.service";
 import { Component, OnInit } from "@angular/core";
-import { GetAdminService } from "./../../services/get/get-admin.services";
 
 @Component({
   selector: "app-alladmin",
@@ -12,8 +12,7 @@ export class AlladminComponent implements OnInit {
   constructor(private service: GetAdminService) {}
 
   ngOnInit(): void {
-    this.service.getAllAdmin().subscribe((response) => {
-      console.log(response);
+    this.service.getAllAdmins().subscribe((response) => {
       this.posts = response;
     });
   }

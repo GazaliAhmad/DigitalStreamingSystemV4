@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="container"><h2>Add an Admin</h2></div>
+  <div class="container">
+    <form #adminPost="ngForm" (ngSubmit)="postAdmin(adminPost.value)">
+      First Name:
+      <input
+        aria-label="first_name"
+        type="text"
+        name="first_name"
+        ngModel
+        placeholder="First Name"
+      />
+      <br /><br />
+      Last Name:
+      <input
+        aria-label="last_name"
+        type="text"
+        name="last_name"
+        ngModel
+        placeholder="Last Name"
+      />
+      <br /><br />
+      Username:
+      <input
+        aria-label="username"
+        type="text"
+        name="username"
+        ngModel
+        placeholder="Username"
+      />
+      <br /><br />
+      Password:
+      <input
+        aria-label="password"
+        type="text"
+        name="password"
+        ngModel
+        placeholder="Set Password"
+      />
+      <br /><br />
+      Email:
+      <input
+        aria-label="email"
+        type="text"
+        name="email"
+        ngModel
+        placeholder="Email"
+      />
+      <br /><br />
+      Phone Number:
+      <input
+        aria-label="phone_number"
+        type="text"
+        name="phone_number"
+        ngModel
+        placeholder="Phone Number"
+      />
+      <br /><br />
+      <button type="submit" class="btn btn-outline-primary btn-rounded">
+        Add Admin
+      </button>
+      <button
+        type="submit"
+        class="btn btn-outline-primary btn-rounded mx-3"
+        [routerLink]="['/', 'admin']"
+      >
+        Back to Admin
+      </button>
+    </form>
+  </div>
+</div>

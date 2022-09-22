@@ -9,7 +9,7 @@ export class GetAdminService {
 
   constructor(private httpClient: HttpClient) {}
 
-  getAllAdmin() {
+  getAllAdmins() {
     return this.httpClient.get(`${this.url}/admin/all`);
   }
 }

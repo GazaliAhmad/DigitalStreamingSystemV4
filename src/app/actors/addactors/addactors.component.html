@@ -1,6 +1,9 @@
 <app-navbar></app-navbar>
 <div class="container">
-  <div class="container"><h2>Add A Movie</h2></div>
+  <div class="container">
+    <h2>Add An actor</h2>
+    <p>Need to update below</p>
+  </div>
   <div class="container">
     <form #actorPost="ngForm" (ngSubmit)="postActor(actorPost)">
       Movie Title:
@@ -45,9 +48,9 @@
       <button
         type="submit"
         class="btn btn-outline-primary btn-rounded mx-3"
-        [routerLink]="['/', 'movies']"
+        [routerLink]="['/', 'actors']"
       >
-        Back to Movies
+        Back to Actors
       </button>
     </form>
   </div>

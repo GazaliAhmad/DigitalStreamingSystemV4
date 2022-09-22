@@ -36,6 +36,7 @@
               >Edit</a
             >
             <a
+              (click)="deleteMovieById(post.movie_id)"
               [routerLink]="['/', 'deletemovies']"
               class="btn btn-outline-danger btn-rounded text-dark mx-2"
               role="link"

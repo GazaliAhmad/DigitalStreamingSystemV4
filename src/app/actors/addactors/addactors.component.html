@@ -2,10 +2,19 @@
 <div class="container">
   <div class="container">
     <h2>Add An actor</h2>
-    <p>Need to update below</p>
+    <p>Need to implement</p>
+    <button
+      type="submit"
+      class="btn btn-outline-primary btn-rounded mx-3"
+      [routerLink]="['/', 'actors']"
+    >
+      Back to Actors
+    </button>
   </div>
+
   <div class="container">
-    <form #actorPost="ngForm" (ngSubmit)="postActor(actorPost)">
+    <!--
+      <form #actorPost="ngForm" (ngSubmit)="postActor(actorPost)">
       Movie Title:
       <input
         aria-label="movie_title"
@@ -42,6 +51,7 @@
         placeholder="Movie Image"
       />
       <br /><br />
+
       <button type="submit" class="btn btn-outline-primary btn-rounded">
         Add Movie
       </button>
@@ -53,5 +63,5 @@
         Back to Actors
       </button>
     </form>
-  </div>
+  --></div>
 </div>

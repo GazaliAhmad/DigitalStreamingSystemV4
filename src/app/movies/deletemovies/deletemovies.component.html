@@ -1,10 +1,18 @@
 <app-navbar></app-navbar>
-<div class="container">
-  <p>deletemovies works!</p>
-  <a
-    [routerLink]="['/', 'movies']"
-    class="btn btn-rounded btn-outline-primary"
-    role="link"
-    >Back to Movies</a
-  >
+<div class="card text-center">
+  <div class="card-header">
+    Digital Streaming System
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Movie Deleted</h5>
+    <p class="card-text">
+      The movie have been deleted
+    </p>
+    <a
+      [routerLink]="['/', 'movies']"
+      class="btn btn-outline-danger btn-rounded"
+      role="link"
+      >Return to Movies</a
+    >
+  </div>
 </div>

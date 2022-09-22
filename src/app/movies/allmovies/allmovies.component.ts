@@ -16,4 +16,10 @@ export class AllmoviesComponent implements OnInit {
       this.posts = response;
     });
   }
+
+  deleteMovieById(id: number) {
+    this.service.deleteMovieById(id).subscribe((response) => {
+      console.log(response);
+    });
+  }
 }

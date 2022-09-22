@@ -12,4 +12,8 @@ export class GetMoviesService {
   getAllMovies() {
     return this.httpClient.get(`${this.url}/movies/all`);
   }
+
+  deleteMovieById(id: number) {
+    return this.httpClient.delete(`${this.url}/movies/delete/${id}`);
+  }
 }
